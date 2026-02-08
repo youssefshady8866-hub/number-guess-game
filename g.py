@@ -16,7 +16,7 @@ def guess_game():
             elif user_guess > number:
                 print("Slightly larger! ⬇️")
             else:
-                print(f"🎉 Genius! You knew the number. {number} في {attempts} Attempts.")
+                print(f"🎉 Genius! You knew the number. {number}  {attempts} Attempts.")
                 break
         except ValueError:
             print("Please enter only a valid number!")
