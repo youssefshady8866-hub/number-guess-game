@@ -3,22 +3,22 @@ import random
 def guess_game():
     number = random.randint(1, 100)
     attempts = 0
-    print("--- مرحباً بك في لعبة تخمين الرقم ---")
-    print("لقد اخترت رقماً بين 1 و 100. هل يمكنك معرفته؟")
+    print("--- Welcome to the number guessing game ---")
+    print("I have chosen a number between 1 and 100. Can you guess it?")
 
     while True:
         try:
-            user_guess = int(input("أدخل تخمينك: "))
+            user_guess = int(input("Enter your guess: "))
             attempts += 1
 
             if user_guess < number:
-                print("أكبر قليلاً! ⬆️")
+                print("Slightly larger! ⬆️")
             elif user_guess > number:
-                print("أصغر قليلاً! ⬇️")
+                print("Slightly larger! ⬇️")
             else:
-                print(f"🎉 عبقري! لقد عرفت الرقم {number} في {attempts} محاولات.")
+                print(f"🎉 Genius! You knew the number. {number} في {attempts} Attempts.")
                 break
         except ValueError:
-            print("الرجاء إدخال رقم صحيح فقط!")
+            print("Please enter only a valid number!")
 
 guess_game()
